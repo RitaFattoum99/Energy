@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'page4.dart';
 
 class Page3 extends StatelessWidget {
   const Page3({Key? key}) : super(key: key);
@@ -165,7 +167,9 @@ class Page3 extends StatelessWidget {
                                                     ),
                                                   ),
                                                   MaterialButton(
-                                                    onPressed: () {},
+                                                    onPressed: () {
+                                                      Get.to(() => Page4());
+                                                    },
                                                     child: const Text(
                                                       "OK",
                                                       style: TextStyle(

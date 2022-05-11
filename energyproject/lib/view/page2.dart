@@ -114,7 +114,7 @@ class Page2 extends StatelessWidget {
           height: 100,
         ),
         Container(
-          width: size.width * 1.2,
+          width: size.width * 0.9,
           // height: size.height * 1.0,
           decoration: BoxDecoration(
             boxShadow: [
