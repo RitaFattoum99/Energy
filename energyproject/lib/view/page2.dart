@@ -57,23 +57,23 @@ class Page2 extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.only(
-            top: 40,
-            left: 125,
+            top: size.height * 0.03,
+            left: size.width * 0.35,
           ),
           child: Row(
             children: [
               SizedBox(
-                width: 25,
-                height: 25,
+                width: size.width * 0.05,
+                height: size.height * 0.05,
                 child: Image.asset(
                   'images/station.png',
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 10),
+                padding: EdgeInsets.only(left: size.width * 0.03),
                 child: Text(
                   'Unavatilable',
-                  style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
+                  style: TextStyle(color: Color(0xff85C48D), fontSize: 15),
                 ),
               ),
             ],
@@ -81,28 +81,28 @@ class Page2 extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.only(
-            top: 30,
-            left: 30,
+            top: size.height * 0.01,
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               SizedBox(
-                width: 130,
-                height: 130,
+                width: size.width * 0.3,
+                height: size.height * 0.3,
                 child: Image.asset(
                   'images/phone.png',
                 ),
               ),
               SizedBox(
-                width: 30,
-                height: 30,
+                width: size.width * 0.09,
+                height: size.height * 0.09,
                 child: Image.asset(
                   'images/link.png',
                 ),
               ),
               SizedBox(
-                width: 130,
-                height: 130,
+                width: size.width * 0.3,
+                height: size.height * 0.3,
                 child: Image.asset(
                   'images/station2.png',
                 ),
@@ -110,71 +110,77 @@ class Page2 extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(
-          height: 100,
-        ),
-        Container(
-          width: size.width * 0.9,
-          // height: size.height * 1.0,
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.blueGrey.withOpacity(0.2),
-                  spreadRadius: 6,
-                  blurRadius: 3)
-            ],
-            borderRadius: BorderRadius.circular(10),
-            gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: [const Color(0xff2BB6C7), const Color(0xff65AF85)],
-            ),
+        Padding(
+          padding: EdgeInsets.only(
+            top: size.height * 0.15,
           ),
-          child: MaterialButton(
-            child: const Text(
-              "Add a Device",
-              style: TextStyle(color: Colors.white, fontSize: 20),
+          child: Container(
+            width: size.width * 0.7,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.blueGrey.withOpacity(0.2),
+                    spreadRadius: 6,
+                    blurRadius: 3)
+              ],
+              borderRadius: BorderRadius.circular(10),
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: [const Color(0xff2BB6C7), const Color(0xff65AF85)],
+              ),
             ),
-            onPressed: () {
-              showDialog(
-                  context: context,
-                  builder: (context) {
-                    return Theme(
-                        data: ThemeData.light(),
-                        // data: ,
-                        child: CupertinoAlertDialog(
-                          content: Container(
-                            width: 700,
-                            padding: const EdgeInsets.all(4.0),
-                            // decoration: BoxDecoration(color: Colors.green[400])
-                            child: const Text(
-                              'please select the connection method',
-                              style: TextStyle(color: const Color(0xff65AF85)),
-                            ),
-                          ),
-                          actions: [
-                            MaterialButton(
-                              onPressed: () {},
+            child: MaterialButton(
+              child: Stack(children: [
+                const Text(
+                  "Add a Device",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+                // Container(
+                //   color: Colors.white.withOpacity(0.5),
+                // ),
+              ]),
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (context) {
+                      return Theme(
+                          data: ThemeData.light(),
+                          // data: ,
+                          child: CupertinoAlertDialog(
+                            content: Container(
+                              width: 700,
+                              padding: const EdgeInsets.all(4.0),
                               child: const Text(
-                                "WIFI",
+                                'please select the connection method',
                                 style:
-                                    TextStyle(color: const Color(0xff2BB6C7)),
+                                    TextStyle(color: const Color(0xff65AF85)),
                               ),
                             ),
-                            MaterialButton(
-                              onPressed: () {
-                                Get.to(() => Page3());
-                              },
-                              child: const Text(
-                                "Bluetooth",
-                                style:
-                                    TextStyle(color: const Color(0xff2BB6C7)),
+                            actions: [
+                              MaterialButton(
+                                onPressed: () {},
+                                child: const Text(
+                                  "WIFI",
+                                  style:
+                                      TextStyle(color: const Color(0xff2BB6C7)),
+                                ),
                               ),
-                            )
-                          ],
-                        ));
-                  });
-            },
+                              MaterialButton(
+                                onPressed: () {
+                                  Get.to(() => Page3());
+                                },
+                                child: const Text(
+                                  "Bluetooth",
+                                  style:
+                                      TextStyle(color: const Color(0xff2BB6C7)),
+                                ),
+                              )
+                            ],
+                          ));
+                    });
+              },
+            ),
           ),
         ),
       ],

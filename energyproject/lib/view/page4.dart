@@ -160,32 +160,34 @@ class Page4 extends StatelessWidget {
             padding: EdgeInsets.only(
               top: size.height * 0.03,
             ),
-            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Column(
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text(
-                    "Charging Powert",
-                    style: TextStyle(color: Colors.black),
+                  Column(
+                    children: [
+                      Text(
+                        "Charging Powert",
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      Text(
+                        "0.00 Kw.h",
+                        style: TextStyle(color: Color(0xff85C48D)),
+                      ),
+                    ],
                   ),
-                  Text(
-                    "0.00 Kw.h",
-                    style: TextStyle(color: Color(0xff85C48D)),
+                  Column(
+                    children: [
+                      Text(
+                        "Charging Time",
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      Text(
+                        "0 min",
+                        style: TextStyle(color: Color(0xff85C48D)),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              Column(
-                children: [
-                  Text(
-                    "Charging Time",
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  Text(
-                    "0 min",
-                    style: TextStyle(color: Color(0xff85C48D)),
-                  ),
-                ],
-              ),
-            ]),
+                ]),
           ),
         ),
         Padding(

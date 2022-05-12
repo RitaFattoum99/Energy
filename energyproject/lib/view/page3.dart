@@ -57,22 +57,22 @@ class Page3 extends StatelessWidget {
         const Divider(),
         Padding(
           padding: EdgeInsets.only(
-            top: 40,
-            left: 80,
+            top: size.height * 0.01,
+            left: size.width * 0.3,
           ),
           child: Center(
             child: Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 10),
+                  padding: EdgeInsets.only(left: size.width * 0.05),
                   child: Text(
                     'Bluetooth Scanning ',
                     style: TextStyle(color: Color(0xff2BB6C7), fontSize: 20),
                   ),
                 ),
                 SizedBox(
-                  width: 40,
-                  height: 35,
+                  width: size.width * 0.08,
+                  height: size.height * 0.08,
                   child: Image.asset(
                     'images/bluetooth.png',
                     scale: 0.9,
@@ -83,7 +83,8 @@ class Page3 extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 30.0, left: 10),
+          padding:
+              EdgeInsets.only(top: size.height * 0.05, left: size.width * 0.05),
           child: TextButton(
             onPressed: () {
               showModalBottomSheet(
@@ -92,13 +93,15 @@ class Page3 extends StatelessWidget {
                   builder: (context) {
                     return Wrap(children: [
                       Padding(
-                        padding: EdgeInsets.only(top: 15, left: 10),
+                        padding: EdgeInsets.only(
+                            top: size.height * 0.05, left: size.width * 0.05),
                         child: Center(
                           child: Column(
                             children: [
                               Padding(
                                 padding: EdgeInsets.only(
-                                    top: 10, left: 10, bottom: 10),
+                                    top: size.height * 0.05,
+                                    left: size.width * 0.05),
                                 child: TextButton(
                                   onPressed: () {
                                     showDialog(
