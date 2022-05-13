@@ -1,10 +1,10 @@
-import 'package:energyproject/view/page8.dart';
+import 'package:energyproject/view/page6.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Page4 extends StatelessWidget {
-  const Page4({Key? key}) : super(key: key);
+class Page5 extends StatelessWidget {
+  const Page5({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -86,30 +86,18 @@ class Page4 extends StatelessWidget {
               Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
             Text(
               '(Device param : us single 40 A)',
-              style: TextStyle(color: Color(0xff85C48D), fontSize: 15),
-            ),
-            Stack(children: [
-              Image.asset(
-                'images/startcharging.png',
-                width: 175,
-                height: 175,
-                scale: 0.9,
-              ),
-              Positioned(
-                top: 54,
-                left: 45,
-                child: RotationTransition(
-                  turns: AlwaysStoppedAnimation(-1 / 360),
-                  child: Image.asset(
-                    'images/layer11.png',
-                    scale: 2.8,
-                  ),
-                ),
-              ),
-            ]),
-            Text(
-              'Ready, Please start charging',
               style: TextStyle(color: Color(0xff2BB6C7), fontSize: 15),
+            ),
+            Image.asset(
+              // 'images/startcharging.png',
+              'images/charging.png',
+              width: 175,
+              height: 175,
+              scale: 1.2,
+            ),
+            Text(
+              'Charging',
+              style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
             ),
           ]),
         ),
@@ -210,7 +198,7 @@ class Page4 extends StatelessWidget {
           padding: EdgeInsets.only(
               top: size.height * 0.02, left: size.width * 0.001),
           child: Text(
-            'Please set charging current (A) : 40',
+            'Set charging current : (30A)',
             style: TextStyle(color: Color(0xff2BB6C7), fontSize: 15),
           ),
         ),
@@ -218,59 +206,24 @@ class Page4 extends StatelessWidget {
           padding: EdgeInsets.only(
             top: size.height * 0.03,
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Color(0xff65AF85),
-                  ),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: MaterialButton(
-                    child: const Text(
-                      "Appointment Set",
-                      style: TextStyle(color: Color(0xff65AF85)),
-                    ),
-                    onPressed: () {}),
+          child: Container(
+            width: size.width * 0.6,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Color(0xff65AF85),
               ),
-              Container(
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.blueGrey.withOpacity(0.2),
-                        spreadRadius: 6,
-                        blurRadius: 3)
-                  ],
-                  borderRadius: BorderRadius.circular(10),
-                  gradient: LinearGradient(
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                    colors: [const Color(0xff2BB6C7), const Color(0xff65AF85)],
-                  ),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: MaterialButton(
+                child: const Text(
+                  "End charging",
+                  style: TextStyle(color: Color(0xff65AF85)),
                 ),
-                child: ElevatedButton(
-                    style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30))),
-                        shadowColor:
-                            MaterialStateProperty.all(Colors.transparent),
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.transparent)),
-                    child: const Text(
-                      "Start charging",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                    onPressed: () {
-                      Get.to(() => Page8());
-                    }),
-              ),
-            ],
+                onPressed: () {
+                  Get.to(() => Page6());
+                }),
           ),
-        )
+        ),
       ],
     ));
   }
