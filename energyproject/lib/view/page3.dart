@@ -58,13 +58,15 @@ class Page3 extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(
             top: size.height * 0.01,
-            left: size.width * 0.3,
+            left: size.width * 0.2,
           ),
           child: Center(
             child: Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: size.width * 0.05),
+                  padding: EdgeInsets.only(
+                    left: size.width * 0.01,
+                  ),
                   child: Text(
                     'Bluetooth Scanning ',
                     style: TextStyle(color: Color(0xff2BB6C7), fontSize: 20),
@@ -88,7 +90,7 @@ class Page3 extends StatelessWidget {
           child: TextButton(
             onPressed: () {
               showModalBottomSheet(
-                  backgroundColor: Color(0xffF8FCFC),
+                  backgroundColor: Color.fromARGB(255, 219, 238, 238),
                   context: context,
                   builder: (context) {
                     return Wrap(children: [
@@ -230,6 +232,7 @@ class Page3 extends StatelessWidget {
                   });
             },
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   "images/bluetooth (1).png",
@@ -255,10 +258,11 @@ class Page3 extends StatelessWidget {
         const Divider(),
         Center(
           child: Padding(
-            padding: EdgeInsets.only(top: 10, left: 10),
+            padding: EdgeInsets.only(
+                top: size.height * 0.03, left: size.width * 0.02),
             child: Text(
               'Disconnected ',
-              style: TextStyle(color: Color(0xff85C48D), fontSize: 25),
+              style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
             ),
           ),
         ),
