@@ -1,5 +1,6 @@
+import 'package:energyproject/view/page5.dart';
+import 'package:energyproject/view/page6.dart';
 import 'package:energyproject/view/page8.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -233,7 +234,9 @@ class Page4 extends StatelessWidget {
                       "Appointment Set",
                       style: TextStyle(color: Color(0xff65AF85)),
                     ),
-                    onPressed: () {}),
+                    onPressed: () {
+                      Get.to(() => Page6());
+                    }),
               ),
               Container(
                 decoration: BoxDecoration(
@@ -252,14 +255,14 @@ class Page4 extends StatelessWidget {
                 ),
                 child: ElevatedButton(
                     style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30))),
-                        shadowColor:
-                            MaterialStateProperty.all(Colors.transparent),
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.transparent)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30))),
+                      shadowColor:
+                          MaterialStateProperty.all(Colors.transparent),
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.transparent),
+                    ),
                     child: const Text(
                       "Start charging",
                       style: TextStyle(color: Colors.white, fontSize: 20),

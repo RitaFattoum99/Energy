@@ -1,4 +1,5 @@
 import 'package:energyproject/view/page6.dart';
+import 'package:energyproject/view/page8.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,225 +38,194 @@ class Page7 extends StatelessWidget {
                     )),
                 child: Center(
                   child: Image.asset(
-                    'images/Menu.png',
-                    scale: 2.1,
+                    'images/drawer.png',
+                    scale: 1.3,
                   ),
                 ),
               ),
             ),
             Padding(
               padding: EdgeInsets.only(
-                  top: size.height * 0.05, left: size.width * 0.02),
+                  top: size.height * 0.09, left: size.width * 0.01),
               child: SizedBox(
-                  child: Text(
-                'Mine',
-                style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
-              )),
+                width: size.width * 0.18,
+                height: size.height * 0.065,
+                child: Image.asset('images/logo.png'),
+              ),
             )
           ],
         ),
-        SizedBox(
-          height: 25,
-        ),
-        Text(
-          "Home EV",
-          style: TextStyle(
-            color: Color(0xff2BB6C7),
-            fontSize: 25,
+        Padding(
+          padding: EdgeInsets.only(
+            top: size.height * 0.03,
+            left: size.width * 0.35,
           ),
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        Text(
-          "V1.0",
-          style: TextStyle(
-            color: Color(0xff85C48D),
-            fontSize: 20,
-          ),
-        ),
-        Container(
-          color: Color.fromARGB(255, 219, 238, 238),
-          width: size.width * 0.7,
-          child: Column(
+          child: Row(
             children: [
-              Padding(
-                padding: EdgeInsets.only(
-                    top: size.height * 0.02, left: size.width * 0.05),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      "images/charger.png",
-                      scale: 1.5,
-                    ),
-                    Text(
-                      'Charge managment',
-                      style: TextStyle(color: Color(0xff85C48D), fontSize: 15),
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: const Color(0xff2BB6C7),
-                      size: 20,
-                    ),
-                  ],
+              SizedBox(
+                width: size.width * 0.05,
+                height: size.height * 0.05,
+                child: Image.asset(
+                  'images/station.png',
                 ),
               ),
-              Divider(
-                color: const Color(0xff2BB6C7),
-              ),
               Padding(
-                padding: EdgeInsets.only(
-                    top: size.height * 0.02, left: size.width * 0.05),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      "images/edit.png",
-                      scale: 1.5,
-                    ),
-                    Text(
-                      'Charging record',
-                      style: TextStyle(color: Color(0xff85C48D), fontSize: 15),
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: const Color(0xff2BB6C7),
-                      size: 20,
-                    ),
-                  ],
-                ),
-              ),
-              Divider(
-                color: const Color(0xff2BB6C7),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: size.height * 0.02, left: size.width * 0.05),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      "images/translate.png",
-                      scale: 1.5,
-                    ),
-                    Text(
-                      'Language',
-                      style: TextStyle(color: Color(0xff85C48D), fontSize: 15),
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: const Color(0xff2BB6C7),
-                      size: 20,
-                    ),
-                  ],
-                ),
-              ),
-              Divider(
-                color: const Color(0xff2BB6C7),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: size.height * 0.02, left: size.width * 0.05),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      "images/system-update.png",
-                      scale: 1.5,
-                    ),
-                    Text(
-                      'Version upgrade',
-                      style: TextStyle(color: Color(0xff85C48D), fontSize: 15),
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: const Color(0xff2BB6C7),
-                      size: 20,
-                    ),
-                  ],
-                ),
-              ),
-              Divider(
-                color: const Color(0xff2BB6C7),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: size.height * 0.02, left: size.width * 0.05),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      "images/loading-process.png",
-                      scale: 1.5,
-                    ),
-                    Text(
-                      'Load Balancing',
-                      style: TextStyle(color: Color(0xff85C48D), fontSize: 15),
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: const Color(0xff2BB6C7),
-                      size: 20,
-                    ),
-                  ],
-                ),
-              ),
-              Divider(
-                color: const Color(0xff2BB6C7),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: size.height * 0.02, left: size.width * 0.05),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      "images/share.png",
-                      scale: 1.5,
-                    ),
-                    Text(
-                      'Switching charging Mode',
-                      style: TextStyle(color: Color(0xff85C48D), fontSize: 15),
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: const Color(0xff2BB6C7),
-                      size: 20,
-                    ),
-                  ],
-                ),
-              ),
-              Divider(
-                color: const Color(0xff2BB6C7),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: size.height * 0.02,
-                    left: size.width * 0.05,
-                    bottom: size.height * 0.01),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      "images/power-button.png",
-                      scale: 1.5,
-                    ),
-                    Text(
-                      'Disconnect',
-                      style: TextStyle(color: Color(0xff85C48D), fontSize: 15),
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: const Color(0xff2BB6C7),
-                      size: 20,
-                    ),
-                  ],
+                padding: EdgeInsets.only(left: 10),
+                child: Text(
+                  '7654321',
+                  style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
                 ),
               ),
             ],
           ),
         ),
+        Padding(
+          padding: EdgeInsets.only(
+            top: size.height * 0.001,
+          ),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+            Stack(children: [
+              Image.asset(
+                'images/startcharging.png',
+                width: 175,
+                height: 175,
+                scale: 0.9,
+              ),
+              Positioned(
+                top: 54,
+                left: 45,
+                child: RotationTransition(
+                  turns: AlwaysStoppedAnimation(-1 / 360),
+                  child: Image.asset(
+                    'images/layer11.png',
+                    scale: 2.8,
+                  ),
+                ),
+              ),
+            ]),
+            Text(
+              'Holding Waiting to charge',
+              style: TextStyle(color: Color(0xff2BB6C7), fontSize: 20),
+            ),
+            SizedBox(height: size.height * 0.01),
+            Text(
+              "Countdown :00:00:06",
+              style: TextStyle(color: Color(0xff85C48D), fontSize: 15),
+            )
+          ]),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            top: size.height * 0.01,
+            // left: size.width * 0.07,
+          ),
+          child: Text(
+            "Reservation Data",
+            style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+              top: size.height * 0.01, bottom: size.height * 0.01),
+          child: Container(
+            color: Color.fromARGB(255, 219, 238, 238),
+            width: size.width * 0.8,
+            child: Column(children: [
+              Padding(
+                padding: EdgeInsets.only(
+                    top: size.height * 0.02, bottom: size.height * 0.02),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Start time",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 10, 10, 10),
+                        fontSize: 20,
+                      ),
+                    ),
+                    Text(
+                      "2022-2-25  14:23",
+                      style: TextStyle(
+                        color: Color(0xff2BB6C7),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Divider(),
+              Padding(
+                padding: EdgeInsets.only(
+                    top: size.height * 0.01, bottom: size.height * 0.01),
+                child: Row(
+                  // mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Charging time",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 10, 10, 10),
+                        fontSize: 20,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: size.width * 0.15),
+                      child: Text(
+                        "2",
+                        style: TextStyle(
+                          color: Color(0xff2BB6C7),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Divider(),
+              Padding(
+                padding: EdgeInsets.only(
+                    top: size.height * 0.01, bottom: size.height * 0.01),
+                child: Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Charging Current",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 10, 10, 10),
+                        fontSize: 20,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: size.width * 0.07),
+                      child: Text(
+                        "30",
+                        style: TextStyle(
+                          color: Color(0xff2BB6C7),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ]),
+          ),
+        ),
+        // Container(
+        //   width: size.width * 0.7,
+        //   decoration: BoxDecoration(
+        //     border: Border.all(
+        //       color: Color(0xff65AF85),
+        //     ),
+        //     borderRadius: BorderRadius.circular(10),
+        //   ),
+        //   child: MaterialButton(
+        //       child: const Text(
+        //         "Cancel",
+        //         style: TextStyle(fontSize: 15, color: Color(0xff65AF85)),
+        //       ),
+        //       onPressed: () {
+        //         Get.to(() => Page8());
+        //       }),
+        // ),
       ],
     ));
   }

@@ -60,7 +60,6 @@ class Page6 extends StatelessWidget {
               top: size.height * 0.1, bottom: size.height * 0.1),
           child: Container(
             color: Color.fromARGB(255, 219, 238, 238),
-            // height: size.height * 0.5,
             width: size.width * 0.8,
             child: Column(children: [
               Padding(
@@ -93,16 +92,19 @@ class Page6 extends StatelessWidget {
                   // mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Charging time            ",
+                      "Charging time",
                       style: TextStyle(
                         color: Color(0xff85C48D),
                         fontSize: 20,
                       ),
                     ),
-                    Text(
-                      "2",
-                      style: TextStyle(
-                        color: Color(0xff2BB6C7),
+                    Padding(
+                      padding: EdgeInsets.only(left: size.width * 0.15),
+                      child: Text(
+                        "2",
+                        style: TextStyle(
+                          color: Color(0xff2BB6C7),
+                        ),
                       ),
                     ),
                   ],

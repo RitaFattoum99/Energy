@@ -89,7 +89,6 @@ class Page5 extends StatelessWidget {
               style: TextStyle(color: Color(0xff2BB6C7), fontSize: 15),
             ),
             Image.asset(
-              // 'images/startcharging.png',
               'images/charging.png',
               width: 175,
               height: 175,
@@ -207,7 +206,7 @@ class Page5 extends StatelessWidget {
             top: size.height * 0.03,
           ),
           child: Container(
-            width: size.width * 0.6,
+            width: size.width * 0.7,
             decoration: BoxDecoration(
               border: Border.all(
                 color: Color(0xff65AF85),
@@ -217,7 +216,7 @@ class Page5 extends StatelessWidget {
             child: MaterialButton(
                 child: const Text(
                   "End charging",
-                  style: TextStyle(color: Color(0xff65AF85)),
+                  style: TextStyle(fontSize: 15, color: Color(0xff65AF85)),
                 ),
                 onPressed: () {
                   Get.to(() => Page6());

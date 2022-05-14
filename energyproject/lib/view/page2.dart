@@ -136,9 +136,6 @@ class Page2 extends StatelessWidget {
                   "Add a Device",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
-                // Container(
-                //   color: Colors.white.withOpacity(0.5),
-                // ),
               ]),
               onPressed: () {
                 showDialog(
@@ -146,7 +143,6 @@ class Page2 extends StatelessWidget {
                     builder: (context) {
                       return Theme(
                           data: ThemeData.light(),
-                          // data: ,
                           child: CupertinoAlertDialog(
                             content: Container(
                               width: 700,

@@ -86,7 +86,7 @@ class Page3 extends StatelessWidget {
         ),
         Padding(
           padding:
-              EdgeInsets.only(top: size.height * 0.05, left: size.width * 0.05),
+              EdgeInsets.only(top: size.height * 0.01, left: size.width * 0.05),
           child: TextButton(
             onPressed: () {
               showModalBottomSheet(
@@ -96,13 +96,13 @@ class Page3 extends StatelessWidget {
                     return Wrap(children: [
                       Padding(
                         padding: EdgeInsets.only(
-                            top: size.height * 0.05, left: size.width * 0.05),
+                            top: size.height * 0.02, left: size.width * 0.05),
                         child: Center(
                           child: Column(
                             children: [
                               Padding(
                                 padding: EdgeInsets.only(
-                                    top: size.height * 0.05,
+                                    top: size.height * 0.01,
                                     left: size.width * 0.05),
                                 child: TextButton(
                                   onPressed: () {
@@ -197,7 +197,9 @@ class Page3 extends StatelessWidget {
                               const Divider(),
                               Padding(
                                 padding: EdgeInsets.only(
-                                    top: 10, left: 10, bottom: 10),
+                                    top: size.height * 0.01,
+                                    left: size.width * 0.01,
+                                    bottom: size.height * 0.01),
                                 child: Text(
                                   "Scan QR Code",
                                   style: TextStyle(
@@ -207,7 +209,9 @@ class Page3 extends StatelessWidget {
                               const Divider(),
                               Padding(
                                 padding: EdgeInsets.only(
-                                    top: 10, left: 10, bottom: 10),
+                                    top: size.height * 0.01,
+                                    left: size.width * 0.01,
+                                    bottom: size.height * 0.01),
                                 child: Text(
                                   "Manual input",
                                   style: TextStyle(
@@ -217,7 +221,9 @@ class Page3 extends StatelessWidget {
                               const Divider(),
                               Padding(
                                 padding: EdgeInsets.only(
-                                    top: 10, left: 10, bottom: 20),
+                                    top: size.height * 0.01,
+                                    left: size.width * 0.01,
+                                    bottom: size.height * 0.03),
                                 child: Text(
                                   "Cancel",
                                   style: TextStyle(
