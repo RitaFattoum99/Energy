@@ -2,7 +2,7 @@ import 'package:energyproject/view/page4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'view/page1.dart';
+import 'view/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,13 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Page4(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: Test2());
   }
 }
 

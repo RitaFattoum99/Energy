@@ -1,6 +1,6 @@
-import 'package:energyproject/view/page5.dart';
+import 'package:energyproject/view/Charging.dart';
 import 'package:energyproject/view/page6.dart';
-import 'package:energyproject/view/page8.dart';
+import 'package:energyproject/view/HomeEV.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -123,86 +123,111 @@ class Page4 extends StatelessWidget {
         Container(
           width: size.width * 0.8,
           height: size.height * 0.2,
-          color: Color.fromARGB(255, 219, 238, 238),
+          color: Color(0xffdef7e1).withOpacity(0.3),
           child: Padding(
             padding: EdgeInsets.only(
               top: size.height * 0.03,
             ),
             child: Column(
               children: [
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Column(
-                        // crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Current",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          Text(
-                            "0 A",
-                            style: TextStyle(color: Color(0xff85C48D)),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        // crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Voltage",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          Text(
-                            "238.3 v",
-                            style: TextStyle(color: Color(0xff85C48D)),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            "Power",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          Text(
-                            "0 kw",
-                            style: TextStyle(color: Color(0xff85C48D)),
-                          ),
-                        ],
-                      ),
-                    ]),
+                IntrinsicHeight(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          // crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Current",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "0 A",
+                              style: TextStyle(color: Color(0xff85C48D)),
+                            ),
+                          ],
+                        ),
+                        VerticalDivider(
+                          color: Color(0xff85C48D),
+                          width: 20,
+                          thickness: 1,
+                          indent: 5,
+                          endIndent: 5,
+                        ),
+                        Column(
+                          // crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Voltage",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "238.3 v",
+                              style: TextStyle(color: Color(0xff85C48D)),
+                            ),
+                          ],
+                        ),
+                        VerticalDivider(
+                          color: Color(0xff85C48D),
+                          width: 20,
+                          thickness: 1,
+                          indent: 5,
+                          endIndent: 5,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "Power",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "0 kw",
+                              style: TextStyle(color: Color(0xff85C48D)),
+                            ),
+                          ],
+                        ),
+                      ]),
+                ),
                 SizedBox(
                   height: 15,
                 ),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            "Charging Powert",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          Text(
-                            "0.00 Kw.h",
-                            style: TextStyle(color: Color(0xff85C48D)),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            "Charging Time",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          Text(
-                            "0 min",
-                            style: TextStyle(color: Color(0xff85C48D)),
-                          ),
-                        ],
-                      ),
-                    ]),
+                IntrinsicHeight(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              "Charging Powert",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "0.00 Kw.h",
+                              style: TextStyle(color: Color(0xff85C48D)),
+                            ),
+                          ],
+                        ),
+                        VerticalDivider(
+                          color: Color(0xff85C48D),
+                          width: 20,
+                          thickness: 1,
+                          indent: 5,
+                          endIndent: 5,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "Charging Time",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "0 min",
+                              style: TextStyle(color: Color(0xff85C48D)),
+                            ),
+                          ],
+                        ),
+                      ]),
+                ),
               ],
             ),
           ),
@@ -223,6 +248,7 @@ class Page4 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
+                height: size.height * 0.08,
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Color(0xff65AF85),
@@ -239,6 +265,7 @@ class Page4 extends StatelessWidget {
                     }),
               ),
               Container(
+                height: size.height * 0.08,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -253,22 +280,15 @@ class Page4 extends StatelessWidget {
                     colors: [const Color(0xff2BB6C7), const Color(0xff65AF85)],
                   ),
                 ),
-                child: ElevatedButton(
-                    style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30))),
-                      shadowColor:
-                          MaterialStateProperty.all(Colors.transparent),
-                      backgroundColor:
-                          MaterialStateProperty.all(Colors.transparent),
-                    ),
-                    child: const Text(
-                      "Start charging",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
+                child: MaterialButton(
+                    child: Stack(children: [
+                      const Text(
+                        "Start charging",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                    ]),
                     onPressed: () {
-                      Get.to(() => Page8());
+                      Get.to(() => Charging());
                     }),
               ),
             ],

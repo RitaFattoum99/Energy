@@ -59,7 +59,7 @@ class Page6 extends StatelessWidget {
           padding: EdgeInsets.only(
               top: size.height * 0.1, bottom: size.height * 0.1),
           child: Container(
-            color: Color.fromARGB(255, 219, 238, 238),
+            color: Color(0xffdef7e1).withOpacity(0.3),
             width: size.width * 0.8,
             child: Column(children: [
               Padding(
@@ -68,17 +68,23 @@ class Page6 extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      "Start time",
-                      style: TextStyle(
-                        color: Color(0xff85C48D),
-                        fontSize: 20,
+                    Padding(
+                      padding: EdgeInsets.only(left: size.width * 0.05),
+                      child: Text(
+                        "Start time",
+                        style: TextStyle(
+                          color: Color(0xff85C48D),
+                          fontSize: 17,
+                        ),
                       ),
                     ),
-                    Text(
-                      "2022-2-25  14:23",
-                      style: TextStyle(
-                        color: Color(0xff2BB6C7),
+                    Padding(
+                      padding: EdgeInsets.only(right: size.width * 0.05),
+                      child: Text(
+                        "2022-2-25  14:23",
+                        style: TextStyle(
+                          color: Color(0xff2BB6C7),
+                        ),
                       ),
                     ),
                   ],
@@ -89,17 +95,20 @@ class Page6 extends StatelessWidget {
                 padding: EdgeInsets.only(
                     top: size.height * 0.02, bottom: size.height * 0.02),
                 child: Row(
-                  // mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      "Charging time",
-                      style: TextStyle(
-                        color: Color(0xff85C48D),
-                        fontSize: 20,
+                    Padding(
+                      padding: EdgeInsets.only(left: size.width * 0.05),
+                      child: Text(
+                        "Charging time",
+                        style: TextStyle(
+                          color: Color(0xff85C48D),
+                          fontSize: 17,
+                        ),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: size.width * 0.15),
+                      padding: EdgeInsets.only(right: size.width * 0.31),
                       child: Text(
                         "2",
                         style: TextStyle(
@@ -117,22 +126,27 @@ class Page6 extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      "Charging Current",
-                      style: TextStyle(
-                        color: Color(0xff85C48D),
+                    Padding(
+                      padding: EdgeInsets.only(left: size.width * 0.05),
+                      child: Text(
+                        "Charging Current",
+                        style:
+                            TextStyle(color: Color(0xff85C48D), fontSize: 17),
                       ),
                     ),
-                    Text(
-                      "30",
-                      style: TextStyle(
-                        color: Color(0xff2BB6C7),
+                    Padding(
+                      padding: EdgeInsets.only(right: size.width * 0.17),
+                      child: Text(
+                        "30",
+                        style: TextStyle(
+                          color: Color(0xff2BB6C7),
+                        ),
                       ),
                     ),
                     Icon(
                       Icons.keyboard_arrow_down_outlined,
                       color: Color(0xff65AF85),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -143,6 +157,8 @@ class Page6 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
+              height: size.height * 0.07,
+              width: size.width * 0.45,
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Color(0xff65AF85),
@@ -152,12 +168,14 @@ class Page6 extends StatelessWidget {
               child: MaterialButton(
                   child: const Text(
                     "Cancel",
-                    style: TextStyle(color: Color(0xff65AF85)),
+                    style: TextStyle(color: Color(0xff65AF85), fontSize: 17),
                   ),
                   minWidth: size.width * 0.4,
                   onPressed: () {}),
             ),
             Container(
+              height: size.height * 0.07,
+              width: size.width * 0.45,
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
@@ -177,6 +195,7 @@ class Page6 extends StatelessWidget {
                     "Confirm",
                     style: TextStyle(
                       color: Colors.white,
+                      fontSize: 17,
                     ),
                   ),
                   minWidth: size.width * 0.4,

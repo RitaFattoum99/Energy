@@ -1,10 +1,11 @@
+import 'package:energyproject/view/page4.dart';
 import 'package:energyproject/view/page6.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Page5 extends StatelessWidget {
-  const Page5({Key? key}) : super(key: key);
+class Charging extends StatelessWidget {
+  const Charging({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -109,86 +110,111 @@ class Page5 extends StatelessWidget {
         Container(
           width: size.width * 0.8,
           height: size.height * 0.2,
-          color: Color.fromARGB(255, 219, 238, 238),
+          color: Color(0xffdef7e1).withOpacity(0.3),
           child: Padding(
             padding: EdgeInsets.only(
               top: size.height * 0.03,
             ),
             child: Column(
               children: [
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Column(
-                        // crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Current",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          Text(
-                            "0 A",
-                            style: TextStyle(color: Color(0xff85C48D)),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        // crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Voltage",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          Text(
-                            "238.3 v",
-                            style: TextStyle(color: Color(0xff85C48D)),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            "Power",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          Text(
-                            "0 kw",
-                            style: TextStyle(color: Color(0xff85C48D)),
-                          ),
-                        ],
-                      ),
-                    ]),
+                IntrinsicHeight(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          // crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Current",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "0 A",
+                              style: TextStyle(color: Color(0xff85C48D)),
+                            ),
+                          ],
+                        ),
+                        VerticalDivider(
+                          color: Color(0xff85C48D),
+                          width: 20,
+                          thickness: 1,
+                          indent: 5,
+                          endIndent: 5,
+                        ),
+                        Column(
+                          // crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Voltage",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "238.3 v",
+                              style: TextStyle(color: Color(0xff85C48D)),
+                            ),
+                          ],
+                        ),
+                        VerticalDivider(
+                          color: Color(0xff85C48D),
+                          width: 20,
+                          thickness: 1,
+                          indent: 5,
+                          endIndent: 5,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "Power",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "0 kw",
+                              style: TextStyle(color: Color(0xff85C48D)),
+                            ),
+                          ],
+                        ),
+                      ]),
+                ),
                 SizedBox(
                   height: 15,
                 ),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            "Charging Powert",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          Text(
-                            "0.00 Kw.h",
-                            style: TextStyle(color: Color(0xff85C48D)),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            "Charging Time",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          Text(
-                            "0 min",
-                            style: TextStyle(color: Color(0xff85C48D)),
-                          ),
-                        ],
-                      ),
-                    ]),
+                IntrinsicHeight(
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              "Charging Powert",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "0.00 Kw.h",
+                              style: TextStyle(color: Color(0xff85C48D)),
+                            ),
+                          ],
+                        ),
+                        VerticalDivider(
+                          color: Color(0xff85C48D),
+                          width: 20,
+                          thickness: 1,
+                          indent: 5,
+                          endIndent: 5,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "Charging Time",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              "0 min",
+                              style: TextStyle(color: Color(0xff85C48D)),
+                            ),
+                          ],
+                        ),
+                      ]),
+                ),
               ],
             ),
           ),
@@ -206,6 +232,7 @@ class Page5 extends StatelessWidget {
             top: size.height * 0.03,
           ),
           child: Container(
+            height: size.height * 0.08,
             width: size.width * 0.7,
             decoration: BoxDecoration(
               border: Border.all(
@@ -219,7 +246,7 @@ class Page5 extends StatelessWidget {
                   style: TextStyle(fontSize: 15, color: Color(0xff65AF85)),
                 ),
                 onPressed: () {
-                  Get.to(() => Page6());
+                  Get.to(() => Page4());
                 }),
           ),
         ),

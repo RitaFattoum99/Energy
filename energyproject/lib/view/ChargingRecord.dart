@@ -1,11 +1,11 @@
-import 'package:energyproject/view/page10.dart';
+import 'package:energyproject/view/Details.dart';
 import 'package:energyproject/view/page6.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Page9 extends StatelessWidget {
-  const Page9({Key? key}) : super(key: key);
+class ChargingRecord extends StatelessWidget {
+  const ChargingRecord({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class Page9 extends StatelessWidget {
                   top: size.height * 0.05, left: size.width * 0.02),
               child: SizedBox(
                   child: Text(
-                'device management',
+                'charging Record',
                 style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
               )),
             )
@@ -58,43 +58,52 @@ class Page9 extends StatelessWidget {
         Divider(),
         Padding(
           padding: EdgeInsets.only(
-            top: size.height * 0.04,
-            left: size.width * 0.02,
-          ),
+              top: size.height * 0.05, bottom: size.height * 0.1),
           child: GestureDetector(
-            onTap: () {
-              Get.to(() => Page10());
-            },
+            onTap: () {},
             child: Container(
-              color: Color.fromARGB(255, 219, 238, 238),
+              color: Color(0xffdef7e1).withOpacity(0.3),
+              height: size.height * 0.1,
               width: size.width * 0.8,
               child: Padding(
                 padding: EdgeInsets.only(
                     top: size.height * 0.02, left: size.width * 0.05),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      "images/charger.png",
-                      scale: 1.5,
+                    Text(
+                      "2022-02-24 -- 2022-02-25",
+                      style: TextStyle(color: Color(0xff85C48D), fontSize: 17),
                     ),
-                    Expanded(
-                        child: new ListTile(
-                      title: Text(
-                        '2130729171',
-                        style:
-                            TextStyle(color: Color(0xff85C48D), fontSize: 20),
+                    SizedBox(
+                      width: size.width * 0.03,
+                    ),
+                    Container(
+                      height: size.height * 0.03,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.blueGrey.withOpacity(0.15),
+                              spreadRadius: 6,
+                              blurRadius: 3)
+                        ],
+                        borderRadius: BorderRadius.circular(5),
+                        gradient: LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: [
+                            const Color(0xff2BB6C7),
+                            const Color(0xff65AF85)
+                          ],
+                        ),
                       ),
-                      subtitle: Text(
-                        '77E6C2DB-BB07-8C3..',
-                        style:
-                            TextStyle(color: Color(0xff85C48D), fontSize: 15),
-                      ),
-                    )),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: const Color(0xff2BB6C7),
-                      size: 20,
+                      child: MaterialButton(
+                          child: const Text(
+                            "Search",
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          ),
+                          minWidth: size.width * 0.01,
+                          onPressed: () {}),
                     ),
                   ],
                 ),

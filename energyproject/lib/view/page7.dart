@@ -1,5 +1,5 @@
 import 'package:energyproject/view/page6.dart';
-import 'package:energyproject/view/page8.dart';
+import 'package:energyproject/view/HomeEV.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -118,7 +118,7 @@ class Page7 extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(
             top: size.height * 0.01,
-            // left: size.width * 0.07,
+            right: size.width * 0.35,
           ),
           child: Text(
             "Reservation Data",
@@ -127,10 +127,11 @@ class Page7 extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.only(
-              top: size.height * 0.01, bottom: size.height * 0.01),
+            top: size.height * 0.01,
+          ),
           child: Container(
-            color: Color.fromARGB(255, 219, 238, 238),
-            width: size.width * 0.8,
+            color: Color(0xffdef7e1).withOpacity(0.3),
+            width: size.width * 0.7,
             child: Column(children: [
               Padding(
                 padding: EdgeInsets.only(
@@ -142,7 +143,7 @@ class Page7 extends StatelessWidget {
                       "Start time",
                       style: TextStyle(
                         color: Color.fromARGB(255, 10, 10, 10),
-                        fontSize: 20,
+                        fontSize: 15,
                       ),
                     ),
                     Text(
@@ -165,7 +166,7 @@ class Page7 extends StatelessWidget {
                       "Charging time",
                       style: TextStyle(
                         color: Color.fromARGB(255, 10, 10, 10),
-                        fontSize: 20,
+                        fontSize: 15,
                       ),
                     ),
                     Padding(
@@ -191,7 +192,7 @@ class Page7 extends StatelessWidget {
                       "Charging Current",
                       style: TextStyle(
                         color: Color.fromARGB(255, 10, 10, 10),
-                        fontSize: 20,
+                        fontSize: 15,
                       ),
                     ),
                     Padding(
@@ -209,23 +210,27 @@ class Page7 extends StatelessWidget {
             ]),
           ),
         ),
-        // Container(
-        //   width: size.width * 0.7,
-        //   decoration: BoxDecoration(
-        //     border: Border.all(
-        //       color: Color(0xff65AF85),
-        //     ),
-        //     borderRadius: BorderRadius.circular(10),
-        //   ),
-        //   child: MaterialButton(
-        //       child: const Text(
-        //         "Cancel",
-        //         style: TextStyle(fontSize: 15, color: Color(0xff65AF85)),
-        //       ),
-        //       onPressed: () {
-        //         Get.to(() => Page8());
-        //       }),
-        // ),
+        Padding(
+          padding: EdgeInsets.only(
+            top: size.height * 0.03,
+          ),
+          child: Container(
+            height: size.height * 0.06,
+            width: size.width * 0.5,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Color(0xff65AF85),
+              ),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: MaterialButton(
+                child: const Text(
+                  "Cancel",
+                  style: TextStyle(fontSize: 15, color: Color(0xff65AF85)),
+                ),
+                onPressed: () {}),
+          ),
+        ),
       ],
     ));
   }

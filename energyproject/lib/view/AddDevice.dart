@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'page3.dart';
+import 'Bluetooth.dart';
 
-class Page2 extends StatelessWidget {
-  const Page2({Key? key}) : super(key: key);
+class AddDevice extends StatelessWidget {
+  const AddDevice({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -116,6 +116,7 @@ class Page2 extends StatelessWidget {
           ),
           child: Container(
             width: size.width * 0.7,
+            height: size.height * 0.1,
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
@@ -164,7 +165,7 @@ class Page2 extends StatelessWidget {
                               ),
                               MaterialButton(
                                 onPressed: () {
-                                  Get.to(() => Page3());
+                                  Get.to(() => Bluetooth());
                                 },
                                 child: const Text(
                                   "Bluetooth",
