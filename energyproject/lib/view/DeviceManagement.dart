@@ -4,8 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Page9 extends StatelessWidget {
-  const Page9({Key? key}) : super(key: key);
+class DeviceManagement extends StatelessWidget {
+  const DeviceManagement({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class Page9 extends StatelessWidget {
                   top: size.height * 0.05, left: size.width * 0.02),
               child: SizedBox(
                   child: Text(
-                'device management',
+                'Device management',
                 style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
               )),
             )
@@ -70,31 +70,48 @@ class Page9 extends StatelessWidget {
               width: size.width * 0.8,
               child: Padding(
                 padding: EdgeInsets.only(
-                    top: size.height * 0.02, left: size.width * 0.05),
+                    top: size.height * 0.05,
+                    left: size.width * 0.02,
+                    bottom: size.height * 0.02),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Image.asset(
-                      "images/charger.png",
-                      scale: 1.5,
+                    Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                              left: size.width * 0.05,
+                              right: size.width * 0.02),
+                          child: Image.asset(
+                            "images/charger.png",
+                            scale: 1.5,
+                          ),
+                        ),
+                        Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '2130729171',
+                                style: TextStyle(
+                                    color: Color(0xff85C48D), fontSize: 20),
+                              ),
+                              Text(
+                                '77E6C2DB-BB07-8C3..',
+                                style: TextStyle(
+                                    color: Color(0xff85C48D), fontSize: 15),
+                              ),
+                            ]),
+                      ],
                     ),
-                    Expanded(
-                        child: new ListTile(
-                      title: Text(
-                        '2130729171',
-                        style:
-                            TextStyle(color: Color(0xff85C48D), fontSize: 20),
+                    Padding(
+                      padding: EdgeInsets.only(
+                        right: size.width * 0.02,
                       ),
-                      subtitle: Text(
-                        '77E6C2DB-BB07-8C3..',
-                        style:
-                            TextStyle(color: Color(0xff85C48D), fontSize: 15),
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                        color: const Color(0xff2BB6C7),
+                        size: 15,
                       ),
-                    )),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: const Color(0xff2BB6C7),
-                      size: 10,
                     ),
                   ],
                 ),

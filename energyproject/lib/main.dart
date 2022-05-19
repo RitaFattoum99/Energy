@@ -1,4 +1,4 @@
-import 'package:energyproject/view/page4.dart';
+import 'package:energyproject/view/CarPage1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
+          unselectedWidgetColor: Color(0xff85C48D),
         ),
         home: Test2());
   }

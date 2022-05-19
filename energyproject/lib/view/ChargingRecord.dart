@@ -23,9 +23,10 @@ class ChargingRecord extends StatelessWidget {
                 decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                          color: Colors.blueGrey.withOpacity(0.3),
-                          spreadRadius: 6,
-                          blurRadius: 3)
+                        color: Colors.blueGrey.withOpacity(0.3),
+                        spreadRadius: 4,
+                        blurRadius: 3,
+                      )
                     ],
                     shape: BoxShape.circle,
                     gradient: LinearGradient(
@@ -81,11 +82,13 @@ class ChargingRecord extends StatelessWidget {
                     Container(
                       height: size.height * 0.03,
                       decoration: BoxDecoration(
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
-                              color: Colors.blueGrey.withOpacity(0.15),
-                              spreadRadius: 6,
-                              blurRadius: 3)
+                            color: Colors.black26,
+                            offset: Offset(-1, 3),
+                            blurRadius: 4.0,
+                            spreadRadius: 1.6,
+                          )
                         ],
                         borderRadius: BorderRadius.circular(5),
                         gradient: LinearGradient(

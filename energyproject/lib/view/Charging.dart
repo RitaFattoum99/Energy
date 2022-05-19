@@ -1,4 +1,4 @@
-import 'package:energyproject/view/page4.dart';
+import 'package:energyproject/view/CarPage1.dart';
 import 'package:energyproject/view/page6.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -246,7 +246,7 @@ class Charging extends StatelessWidget {
                   style: TextStyle(fontSize: 15, color: Color(0xff65AF85)),
                 ),
                 onPressed: () {
-                  Get.to(() => Page4());
+                  Get.to(() => CarPage1());
                 }),
           ),
         ),

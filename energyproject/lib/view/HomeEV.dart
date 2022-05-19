@@ -1,4 +1,5 @@
 import 'package:energyproject/view/ChargingRecord.dart';
+import 'package:energyproject/view/VersionUpgrade.dart';
 import 'package:energyproject/view/page6.dart';
 import 'package:energyproject/view/HomeEV.dart';
 import 'package:energyproject/view/DeviceManagement.dart';
@@ -87,7 +88,7 @@ class Page8 extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  Get.to(() => Page9());
+                  Get.to(() => DeviceManagement());
                 },
                 child: Padding(
                   padding: EdgeInsets.only(
@@ -198,7 +199,9 @@ class Page8 extends StatelessWidget {
                 color: const Color(0xff2BB6C7),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => VersionUpgrade());
+                },
                 child: Padding(
                   padding: EdgeInsets.only(
                       top: size.height * 0.01, left: size.width * 0.05),

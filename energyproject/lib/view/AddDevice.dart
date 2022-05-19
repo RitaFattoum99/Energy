@@ -87,22 +87,22 @@ class AddDevice extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               SizedBox(
-                width: size.width * 0.3,
-                height: size.height * 0.3,
+                width: size.width * 0.35,
+                height: size.height * 0.35,
                 child: Image.asset(
                   'images/phone.png',
                 ),
               ),
               SizedBox(
-                width: size.width * 0.09,
-                height: size.height * 0.09,
+                width: size.width * 0.1,
+                height: size.height * 0.1,
                 child: Image.asset(
                   'images/link.png',
                 ),
               ),
               SizedBox(
-                width: size.width * 0.3,
-                height: size.height * 0.3,
+                width: size.width * 0.35,
+                height: size.height * 0.35,
                 child: Image.asset(
                   'images/station2.png',
                 ),
@@ -112,7 +112,7 @@ class AddDevice extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.only(
-            top: size.height * 0.15,
+            top: size.height * 0.1,
           ),
           child: Container(
             width: size.width * 0.7,
@@ -120,9 +120,10 @@ class AddDevice extends StatelessWidget {
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                    color: Colors.blueGrey.withOpacity(0.2),
-                    spreadRadius: 6,
-                    blurRadius: 3)
+                  color: Colors.blueGrey.withOpacity(0.3),
+                  spreadRadius: 4,
+                  blurRadius: 3,
+                )
               ],
               borderRadius: BorderRadius.circular(10),
               gradient: LinearGradient(

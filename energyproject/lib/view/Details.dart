@@ -64,51 +64,76 @@ class Details extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding:
-              EdgeInsets.only(top: size.height * 0.02, left: size.width * 0.01),
-          child: Text(
-            "Code : AC10000000000012",
-            style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                  top: size.height * 0.02, left: size.width * 0.15),
+              child: Text(
+                "Code : AC10000000000012",
+                style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
+              ),
+            ),
+          ],
         ),
         const Divider(),
-        Padding(
-          padding:
-              EdgeInsets.only(top: size.height * 0.02, left: size.width * 0.01),
-          child: Text(
-            "Name : 2130729171",
-            style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                  top: size.height * 0.02, left: size.width * 0.15),
+              child: Text(
+                "Name : 2130729171",
+                style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
+              ),
+            ),
+          ],
         ),
         const Divider(),
-        Padding(
-          padding:
-              EdgeInsets.only(top: size.height * 0.02, left: size.width * 0.01),
-          child: Text(
-            "Type of plug : please edit",
-            style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                  top: size.height * 0.02, left: size.width * 0.15),
+              child: Text(
+                "Type of plug : please edit",
+                style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
+              ),
+            ),
+          ],
         ),
         const Divider(),
-        Padding(
-          padding:
-              EdgeInsets.only(top: size.height * 0.02, left: size.width * 0.01),
-          child: Text(
-            "Software version : 4.6",
-            style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                  top: size.height * 0.02, left: size.width * 0.15),
+              child: Text(
+                "Software version : 4.6",
+                style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
+              ),
+            ),
+          ],
         ),
         const Divider(),
-        Padding(
-          padding: EdgeInsets.only(
-              top: size.height * 0.02,
-              left: size.width * 0.01,
-              bottom: size.height * 0.02),
-          child: Text(
-            "Bluetooth version : 1(OTA)",
-            style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                  top: size.height * 0.02,
+                  left: size.width * 0.15,
+                  bottom: size.height * 0.02),
+              child: Text(
+                "Bluetooth version : 1(OTA)",
+                style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
+              ),
+            ),
+          ],
         ),
         Container(
           width: size.width,
@@ -123,22 +148,32 @@ class Details extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding:
-              EdgeInsets.only(top: size.height * 0.02, left: size.width * 0.01),
-          child: Text(
-            "Total Charging Times : 1",
-            style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                  top: size.height * 0.02, left: size.width * 0.2),
+              child: Text(
+                "Total Charging Times : 1",
+                style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
+              ),
+            ),
+          ],
         ),
         const Divider(),
-        Padding(
-          padding:
-              EdgeInsets.only(top: size.height * 0.02, left: size.width * 0.01),
-          child: Text(
-            "Total Fault Times : 0",
-            style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                  top: size.height * 0.02, left: size.width * 0.2),
+              child: Text(
+                "Total Fault Times : 0",
+                style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
+              ),
+            ),
+          ],
         ),
       ]),
     );
