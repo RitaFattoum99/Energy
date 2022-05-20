@@ -1,4 +1,4 @@
-import 'package:energyproject/view/page6.dart';
+import 'package:energyproject/view/AppointmentSet.dart';
 import 'package:energyproject/view/HomeEV.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

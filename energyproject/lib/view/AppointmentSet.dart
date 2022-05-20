@@ -4,8 +4,8 @@ import 'package:energyproject/view/page7.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Page6 extends StatelessWidget {
-  const Page6({Key? key}) : super(key: key);
+class AppointmentSet extends StatelessWidget {
+  const AppointmentSet({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -205,6 +205,14 @@ class Page6 extends StatelessWidget {
             ),
           ],
         ),
+        Positioned(
+          bottom: 0,
+          child: SizedBox(
+            width: size.width,
+            height: size.height * 0.5,
+            child: Image.asset('images/lines.png'),
+          ),
+        )
       ],
     ));
   }

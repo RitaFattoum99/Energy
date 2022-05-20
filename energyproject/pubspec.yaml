@@ -65,11 +65,11 @@ flutter:
 
 
 
-  fonts:
-     - family: Montserrat
-       fonts:
-         - asset: asset2/Montserrat-Italic-VariableFont_wght.ttf
-         - asset: asset2/Montserrat-VariableFont_wght.ttf
+  # fonts:
+  #    - family: Montserrat
+  #      fonts:
+  #        - asset: asset2/Montserrat-Italic-VariableFont_wght.ttf
+  #        - asset: asset2/Montserrat-VariableFont_wght.ttf
 
 
 

@@ -1,5 +1,7 @@
+import 'package:energyproject/view/AppointmentSet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CarPage1 extends StatefulWidget {
   const CarPage1({Key? key}) : super(key: key);
@@ -362,7 +364,9 @@ class _CarPage1State extends State<CarPage1> {
                         shadowColor:
                             MaterialStateProperty.all(Colors.transparent),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(() => AppointmentSet());
+                      },
                       child: const Padding(
                         padding: EdgeInsets.only(
                           top: 5,

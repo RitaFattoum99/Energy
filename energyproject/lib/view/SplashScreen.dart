@@ -2,14 +2,14 @@ import 'package:energyproject/controller/navigate.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Test2 extends StatefulWidget {
-  const Test2({Key? key}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
-  State<Test2> createState() => _Test2State();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _Test2State extends State<Test2> {
+class _SplashScreenState extends State<SplashScreen> {
   final productController = Get.put(NavigateController());
   @override
   Widget build(BuildContext context) {

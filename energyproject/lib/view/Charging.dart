@@ -1,5 +1,5 @@
 import 'package:energyproject/view/CarPage1.dart';
-import 'package:energyproject/view/page6.dart';
+import 'package:energyproject/view/AppointmentSet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

@@ -1,4 +1,6 @@
+import 'package:energyproject/view/DeviceManagement.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Details extends StatelessWidget {
   const Details({Key? key}) : super(key: key);
@@ -8,47 +10,54 @@ class Details extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Column(children: [
-        Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 30.0, left: 20),
-              child: Container(
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.blueGrey.withOpacity(0.3),
-                          spreadRadius: 6,
-                          blurRadius: 3)
-                    ],
-                    shape: BoxShape.circle,
-                    gradient: LinearGradient(
-                      colors: [
-                        Color(0xff85C48D),
-                        Color(0xff2BB6C7),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+              () => DeviceManagement(),
+            );
+          },
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 30.0, left: 20),
+                child: Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.blueGrey.withOpacity(0.3),
+                            spreadRadius: 6,
+                            blurRadius: 3)
                       ],
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                    )),
-                child: Center(
-                  child: Image.asset(
-                    'images/Menu.png',
-                    scale: 2.1,
+                      shape: BoxShape.circle,
+                      gradient: LinearGradient(
+                        colors: [
+                          Color(0xff85C48D),
+                          Color(0xff2BB6C7),
+                        ],
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                      )),
+                  child: Center(
+                    child: Image.asset(
+                      'images/Menu.png',
+                      scale: 2.1,
+                    ),
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                  top: size.height * 0.05, left: size.width * 0.02),
-              child: SizedBox(
-                  child: Text(
-                'Details Of Charge  ',
-                style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
-              )),
-            ),
-          ],
+              Padding(
+                padding: EdgeInsets.only(
+                    top: size.height * 0.05, left: size.width * 0.02),
+                child: SizedBox(
+                    child: Text(
+                  'Details Of Charge  ',
+                  style: TextStyle(color: Color(0xff85C48D), fontSize: 20),
+                )),
+              ),
+            ],
+          ),
         ),
         SizedBox(height: size.height * 0.03),
         Container(
