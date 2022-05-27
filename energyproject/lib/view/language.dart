@@ -122,20 +122,6 @@ class Language extends StatelessWidget {
                   ],
                 ))),
           ),
-          // Positioned(
-          //   bottom: 0,
-          //   child: SizedBox(
-          //     width: size.width,
-          //     height: size.height * 0.5,
-          //     child: Image.asset('images/lines.png'),
-          //   ),
-          // )
-          Padding(
-            padding: EdgeInsets.only(top: size.height * 0.43),
-            child: Container(
-              child: Image.asset('images/lines.png'),
-            ),
-          )
         ],
       ),
     );

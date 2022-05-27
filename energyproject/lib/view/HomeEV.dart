@@ -500,6 +500,17 @@ class HomeEV extends StatelessWidget {
                   Get.to(() => AddDevice());
                 },
               ),
+              ListTile(
+                leading: Icon(Icons.car_repair_sharp, color: Color(0xff65AF85)),
+                title: Text(
+                  "test",
+                  style:
+                      TextStyle(color: const Color(0xff65AF85), fontSize: 20),
+                ),
+                onTap: () {
+                  Get.to(() => DeviceManagement());
+                },
+              ),
             ],
           ),
         ));

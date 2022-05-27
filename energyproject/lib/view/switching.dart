@@ -116,20 +116,6 @@ class Switching extends StatelessWidget {
                   ],
                 ))),
           ),
-          // Positioned(
-          //   bottom: 0,
-          //   child: SizedBox(
-          //     width: size.width,
-          //     height: 150,
-          //     child: Image.asset('images/lines.png'),
-          //   ),
-          // )
-          Padding(
-            padding: EdgeInsets.only(top: size.height * 0.43),
-            child: Container(
-              child: Image.asset('images/lines.png'),
-            ),
-          )
         ],
       ),
     );

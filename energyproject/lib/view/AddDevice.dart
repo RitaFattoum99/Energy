@@ -2,7 +2,6 @@ import 'package:energyproject/view/HomeEV.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'Bluetooth.dart';
 
 class AddDevice extends StatelessWidget {

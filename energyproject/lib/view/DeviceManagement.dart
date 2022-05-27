@@ -1,8 +1,5 @@
-import 'package:energyproject/view/AddDevice.dart';
 import 'package:energyproject/view/Details.dart';
-import 'package:energyproject/view/AppointmentSet.dart';
 import 'package:energyproject/view/HomeEV.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
