@@ -1,3 +1,4 @@
+import 'package:energyproject/view/AddDevice.dart';
 import 'package:energyproject/view/HomeEV.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -98,7 +99,9 @@ class VersionUpgrade extends StatelessWidget {
                                         ),
                                         actions: [
                                           MaterialButton(
-                                            onPressed: () {},
+                                            onPressed: () {
+                                              Navigator.pop(context, true);
+                                            },
                                             child: const Text(
                                               "Cancel",
                                               style: TextStyle(
@@ -112,6 +115,7 @@ class VersionUpgrade extends StatelessWidget {
                                                   !ctrl.checkBool.value;
                                               ctrl1.checkBool1.value = false;
                                               ctrl2.checkBool2.value = false;
+                                              Navigator.pop(context, true);
                                             },
                                             child: const Text(
                                               "Confirm",
@@ -159,7 +163,9 @@ class VersionUpgrade extends StatelessWidget {
                                         ),
                                         actions: [
                                           MaterialButton(
-                                            onPressed: () {},
+                                            onPressed: () {
+                                              Navigator.pop(context, true);
+                                            },
                                             child: const Text(
                                               "Cancel",
                                               style: TextStyle(
@@ -173,6 +179,7 @@ class VersionUpgrade extends StatelessWidget {
                                                   !ctrl1.checkBool1.value;
                                               ctrl.checkBool.value = false;
                                               ctrl2.checkBool2.value = false;
+                                              Navigator.pop(context, true);
                                             },
                                             child: const Text(
                                               "Confirm",
@@ -220,7 +227,9 @@ class VersionUpgrade extends StatelessWidget {
                                         ),
                                         actions: [
                                           MaterialButton(
-                                            onPressed: () {},
+                                            onPressed: () {
+                                              Navigator.pop(context, true);
+                                            },
                                             child: const Text(
                                               "Cancel",
                                               style: TextStyle(
@@ -234,6 +243,7 @@ class VersionUpgrade extends StatelessWidget {
                                                   !ctrl2.checkBool2.value;
                                               ctrl.checkBool.value = false;
                                               ctrl1.checkBool1.value = false;
+                                              Navigator.pop(context, true);
                                             },
                                             child: const Text(
                                               "Confirm",

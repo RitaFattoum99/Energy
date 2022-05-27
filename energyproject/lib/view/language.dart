@@ -1,4 +1,5 @@
 import 'package:energyproject/controller/Language.dart';
+import 'package:energyproject/view/AddDevice.dart';
 import 'package:energyproject/view/Details.dart';
 import 'package:energyproject/view/AppointmentSet.dart';
 import 'package:energyproject/view/HomeEV.dart';
